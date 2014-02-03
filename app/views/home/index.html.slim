@@ -1,0 +1,51 @@
+.col-xs-10.col-xs-offset-1
+  form class="form-horizontal" role="form"
+    .form-group
+      label.col-sm-3.control-label for="input-password"  Private password
+      .col-sm-9
+        input#input-password.form-control type="password" required=true placeholder="required"
+    .form-group
+      label.col-sm-3.control-label for="input-password-retype"  Retype private password
+      .col-sm-9
+        input#input-password-retype.form-control type="password" required=true placeholder="required"
+    .form-group
+      label.col-sm-3.control-label for="input-domain"  Domain
+      .col-sm-9
+        input#input-domain.form-control type="text" required=true placeholder="required"
+    .form-group
+      label.col-sm-3.control-label for="input-username" Username
+      .col-sm-9
+        input#input-username.form-control type="text"
+    .form-group
+      label.col-sm-3.control-label for="input-length-limit" Length limit
+      .col-sm-9
+        select#input-length-limit.form-control
+          option value=""  No limit
+          option value="4"  4
+          option value="8"  8
+          option value="15"  15
+          option value="20"  20
+    .form-group
+      .col-sm-9.col-sm-offset-3
+        label.checkbox-inline
+          input#input-use-alphabet type="checkbox" checked="checked" 
+          | Use alphabets
+        | &nbsp;
+        label.checkbox-inline
+          input#input-use-number type="checkbox" checked="checked" 
+          | Use numbers
+        | &nbsp;
+        label.checkbox-inline
+          input#input-use-symbol type="checkbox" checked="checked" 
+          | Use symbols
+    hr
+    .form-group
+      .col-sm-9.col-sm-offset-3
+        button.btn.btn-success type="submit"  Generate password
+        button.btn.btn-link type="reset"  Reset
+
+  #result-container.panel.panel-success style="display: none;"
+    .panel-heading
+      h3.panel-title Generated password
+    .panel-body
+      strong#generated-password

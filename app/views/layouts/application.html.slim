@@ -1,0 +1,13 @@
+doctype html
+html
+head
+  meta name="viewport" content="width=device-width, initial-scale=1"
+  title Smart Password Generator
+  = stylesheet_link_tag('application', media: 'all')
+  = csrf_meta_tags
+body
+  .container
+    .page-header
+      h1 Smart Password Generator
+    = yield
+  = javascript_include_tag('application')
